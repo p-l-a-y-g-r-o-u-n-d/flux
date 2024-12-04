@@ -1,0 +1,20 @@
+# flux HelmRelease crd for installing nginx ingress controller helm chart
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: crossplane-system
+  namespace: crossplane-system
+spec:
+  chart:
+    spec:
+      chart: crossplane
+      version: 1.10.x
+      interval: 5h # this is for checking of a new chart
+      sourceRef:
+        kind: HelmRepository
+        name: crossplane-stable
+  releaseName: crossplane-system
+  targetNamespace: crossplane-system
+  interval: 1h # this is for drifting of the helm created resources
+  
+  
