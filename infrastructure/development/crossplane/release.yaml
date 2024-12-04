@@ -10,7 +10,7 @@ spec:
   chart:
     spec:
       chart: crossplane
-      version: 1.17.x
+      version: 1.15.x
       interval: 5h # this is for checking of a new chart
       sourceRef:
         kind: HelmRepository
