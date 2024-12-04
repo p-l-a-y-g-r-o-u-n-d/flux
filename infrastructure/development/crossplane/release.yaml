@@ -5,6 +5,8 @@ metadata:
   name: crossplane-system
   namespace: flux-system
 spec:
+  releaseName: crossplane-system
+  interval: 1h # this is for drifting of the helm created resources
   chart:
     spec:
       chart: crossplane
@@ -13,8 +15,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: crossplane-stable
-  releaseName: crossplane-system
-  targetNamespace: crossplane-system
-  interval: 1h # this is for drifting of the helm created resources
   
   
