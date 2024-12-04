@@ -1,0 +1,9 @@
+# flux HelmRepository for installing nginx ingress controller
+
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: crossplane-stable
+  namespace: crossplane
+spec:
+  url: https://charts.crossplane.io/stable
