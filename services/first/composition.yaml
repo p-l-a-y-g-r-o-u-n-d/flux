@@ -1,0 +1,29 @@
+---
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: democluster
+spec:
+  compositeTypeRef:
+    apiVersion: service.catalog/v1alpha1
+    kind: DemoCluster
+  mode: Pipeline
+  pipeline:
+    - step: create-namespace
+      functionRef:
+        name: function-go-templating
+      input:
+        apiVersion: gotemplating.fn.crossplane.io/v1beta1
+        kind: GoTemplate
+        source: Inline
+        inline:
+          template: |
+            ---
+            apiVersion: v1
+            kind: Namespace
+            metadata:
+              name: {{ .observed.composite.resource.metadata.name }}
+    - step: automatically-detect-ready-composed-resources
+      functionRef:
+        name: function-auto-ready
+
