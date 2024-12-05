@@ -1,3 +1,4 @@
 resources:
   - "./core.yaml"
   - "./provider-k8s.yaml"
+  - "./functions.yaml"
