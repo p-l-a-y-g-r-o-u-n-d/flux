@@ -2,7 +2,7 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
-  name: democlusters.first.service.catalog
+  name: democlusters.service.catalog
   labels:
     service.catalog/name: DemoCluster
     service.catalog/version: v1alpha1
