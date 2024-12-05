@@ -4,8 +4,8 @@ kind: CompositeResourceDefinition
 metadata:
   name: democlusters.first.service.catalog
   labels:
-    service.catalog/name: Nice Demo Cluster
-    service.catalog/description: A nice demo cluster
+    service.catalog/name: "Nice Demo Cluster"
+    service.catalog/description: "A nice demo cluster"
     service.catalog/version: v1alpha1
 spec:
   group: first.service.catalog
