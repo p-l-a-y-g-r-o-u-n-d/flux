@@ -1,0 +1,31 @@
+---
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: demo.service.catalog
+spec:
+  group: first.service.catalog
+  names:
+    kind: DemoCluster
+    plural: democlusters
+  claimNames:
+    kind: DemoClusterClaim
+    plural: demolustersclaims
+  versions:
+    - name: v1alpha1
+      served: true
+      referenceable: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                targetNamespace:
+                  type: string
+                domain:
+                  type: string
+              required:
+                - targetNamespace
+                - domain
