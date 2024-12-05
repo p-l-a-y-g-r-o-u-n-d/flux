@@ -3,8 +3,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: nginx
-  namespace: nginx
+  name: nginx-ingress
+  namespace: nginx-ingress
 spec:
   url: oci://ghcr.io/nginxinc/charts
   type: oci
