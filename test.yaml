@@ -1,0 +1,7 @@
+apiVersion: service.catalog/v1alpha1
+kind: DemoClusterClaim
+metadata:
+  name: test
+spec:
+  targetNamespace: test
+  domain: test
