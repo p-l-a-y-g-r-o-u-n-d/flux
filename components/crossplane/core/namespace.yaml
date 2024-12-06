@@ -1,4 +1,4 @@
-# create a namespace for nginx
+# create a namespace for crossplane-system
 
 apiVersion: v1
 kind: Namespace
